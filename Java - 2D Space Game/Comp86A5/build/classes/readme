@@ -1,0 +1,72 @@
+NAME: Jiayuan Wang (Jay)
+ASSIGNMENT A5
+
+-Compiling-
+[Compile with all necessary classes and run the Main.java.]
+Necessary classes: BuyShipFrame, Fightership, Main, Map, Mothership, Planet,
+Player, SetKeysFrame, SettingsFrame, Ship, Warship
+
+-Inheritance Hierarchy-
+Fightership, Mothership, and Warship are objects inheriting from the
+   abstract class of Ship.
+Map inherites from the class JComponent.
+Main, BuyShipFrame, SetKeysFrame, and SettingsFrame inherites from the 
+class JFrame.
+Player and Planet are object classes.
+
+-Aggregation Hierarchy-
+Main owns Map -> Map owns Ships which is an array of all ships, Map also owns 
+   Objects which is an array of all objects.
+Map controls -> SettingsFrame, SetKeysFrame, and BuyShipFrame frames
+
+-Collaboration Relationships-
+Main uses Map and it's public functions.
+Map uses Ship and its subclasses, and also has listeners
+   (mouse listeners and listening to whether the Main frame was resized).
+Map also adds listeners to SettingsFrame SetKeysFrame, and BuyShipFrame 
+components to know when to do certain operations.
+Map uses Timer to do scheduled tasks in the Clock functions in the class.
+Map also uses Player and Planet class to make objects and use them on the map.
+Map detects collisions between objects.
+
+-GAME FEATURES-
+-This game is a space race game to colonize all the possible planets.
+-The player can set their own name, color, and starting wealth, along with
+number of planets, and number of enemies.
+-Player wins by colonizing all planets.
+-There are three types of ships.
+   -Fighter ships: fast, fights well, and cost the least, can destroy other
+      fighter ships.
+   -Mother ships: mediums speed, doesn't fight well, can help give shield to
+      other friendly ships it passes by.
+   -Warships: largest ships, slow, has lots of damage, can colonize 2 planets.
+-Players start with 1 warship and 1 fighter ship.
+-Time on the status shown on the top gives when the year will advance and
+   when the income will be collected.
+
+-MAP FEATURES-
+-Selecting a ship or planet will highlight them. Deselect by clicking anywhere.
+-Selected ships will have a line showing where they are headed.
+-Selecting the player's ships will allow for mouse movement on the map,
+   click anywhere on the map and the ship will set its destination to there.
+-Ships have a zone of detection that is colored in a circular shape, ships
+   that come into contact with that zone will be engaged.
+-Zoom and speed can be changed with keys.
+-Object info is displayed on the bottom left when selected.
+-Owner info of selected object is shown if that object has an owner.
+-Map can be moved with AWSD keys when nothing is selected.
+
+-IN GAME MENU-
+-Players can press 'ESC' for in game menu.
+-Changing keys allows user to see all the keys mapped to certain actions, 
+   and they can change them to other keys, ones that are not already mapped.
+-Warships with colonize left can go on planets and the colonize option will
+   show up with the other green option buttons.
+-Players can delete their ships only.
+-Players can buy ships and set them to spawn anywhere, even on their planets
+   for easier transitions.
+-Players can save game states and load game states. File format is SGS.
+
+-AI PLAYERS-
+-AI moves ships randomly when ships reach destinations.
+-AI also buys Motherships randomly when there is enough money.
