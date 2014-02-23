@@ -1,6 +1,6 @@
 /*
  ************************************************
- * NAME: Jay Wang    EMAIL: jayw.92@gmail.com
+ * NAME: Jay Wang    EMAIL: jaywangpro@gmail.com
  *
  * DESCRIPTION: This is a program that takes in
  *    text input and outputs frequncies of all 
